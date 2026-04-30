@@ -3,19 +3,18 @@ import {
   createStaticNavigation,
 } from '@react-navigation/native';
 import { createDrawerNavigator } from '@react-navigation/drawer';
-import { Home, UserCircleIcon, Settings, List, UtensilsCrossed } from 'lucide-react-native'
+import { Home, UserCircleIcon, Settings, List, UtensilsCrossed } from 'lucide-react-native';
 
 // Screens
 import HomeScreen from './screens/HomeScreen';
 import ProfileScreen from './screens/ProfileScreen';
 import MenuScreen from './screens/MenuScreen';
 import OrderScreen from './screens/OrderScreen';
-import SettingScreen from 'screens/SettingScreen';
+import SettingScreen from './screens/SettingScreen';
 
-// Rojo claro
+// Colores
 const colorFocused = '#FF6B6B';
 const textFocused = '#FF6B6B';
-// Rojo mas claro para el fondo del item activo
 const drawerActiveTintColor = '#fae6e6';
 
 const DrawerConfig = createDrawerNavigator({
@@ -90,9 +89,6 @@ const DrawerConfig = createDrawerNavigator({
 
 const Navigation = createStaticNavigation(DrawerConfig);
 
-
 export default function App() {
-  return (
-    <Navigation />
-  );
+  return <Navigation />;
 }
